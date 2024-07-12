@@ -17,19 +17,19 @@ import org.jetbrains.annotations.Nullable;
 public class NeoForgeVersion {
     private static final Logger LOGGER = LogManager.getLogger();
     // This is Forge's Mod Id, used for the NeoForgeMod and resource locations
-    public static final String MOD_ID = "neoforge";
+    public static final String MOD_ID = "blahaj";
 
     private static final String version;
     private static final String fmlVersion;
 
     static {
         String vers = JarVersionLookupHandler.getVersion(NeoForgeVersion.class).orElseGet(() -> FMLLoader.versionInfo().neoForgeVersion());
-        if (vers == null) throw new RuntimeException("Missing NeoForge version, cannot continue");
+        if (vers == null) throw new RuntimeException("Missing Blahaj version, cannot continue");
         version = vers;
-        LOGGER.debug(Logging.CORE, "Found NeoForge version {}", version);
+        LOGGER.debug(Logging.CORE, "Found Blahaj version {}", version);
 
         fmlVersion = JarVersionLookupHandler.getVersion(FMLLoader.class).orElseGet(() -> FMLLoader.versionInfo().fmlVersion());
-        LOGGER.debug(Logging.CORE, "Found FML version {}", fmlVersion);
+        LOGGER.debug(Logging.CORE, "Found BML version {}", fmlVersion);
     }
 
     public static String getFmlVersion() {
